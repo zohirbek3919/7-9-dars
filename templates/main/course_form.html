@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Kurs — {{ action }}{% endblock title %}
+
+{% block content %}
+
+<h1>Kurs {{ action }}</h1>
+
+<form method="post">
+    {% csrf_token %}
+    <table>
+        {{ form.as_table }}
+    </table>
+    <br>
+    <button type="submit">{{ action }}</button>
+    <a href="{% url 'index' %}">Bekor qilish</a>
+</form>
+
+{% endblock content %}

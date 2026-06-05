@@ -5,6 +5,8 @@
 {% block content %}
 
 <h1>{{ course.name }} kursi studentlari</h1>
+<a href="{% url 'course_update' course.id %}">Kursni tahrirlash</a>
+<br><br>
 
 {% if course.description %}
 <p><strong>Tavsif:</strong> {{ course.description }}</p>
